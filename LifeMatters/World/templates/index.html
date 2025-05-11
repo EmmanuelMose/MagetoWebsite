@@ -36,7 +36,10 @@ nav {
 }
 
 .icon img {
-    height: 30px;
+    height: 100px;
+    width: 100px;
+    border: 1px solid green;
+    border-radius: 50px;
 }
 
 .nav-links {
@@ -56,6 +59,12 @@ nav {
     cursor: pointer;
     padding: 8px;
     display: inline-block;
+    padding: 10px 15px;
+    
+}
+.nav-links a:hover{
+    background-color: green;
+    color: black;
 }
 
 .dropdown-content {
@@ -96,6 +105,11 @@ nav {
 .login-btn {
     background: #222;
     color: white;
+    font-size: 20px;
+}
+.login-btn:hover{
+    color: black;
+    background-color: green;
 }
 
 main {
@@ -129,6 +143,11 @@ main {
     cursor: pointer;
     margin-bottom: 40px;
     font-family: inherit;
+    font-size: 20px;
+}
+.learn-more-btn:hover{
+    background-color: green;
+    color: black;
 }
 
 .clients img {
@@ -202,6 +221,25 @@ main {
         margin-bottom: 30px;
     }
 }
+.footer{
+    height: 100px;
+    width: 100%;
+    background-color: smoke-white;
+}
+.footer ul{
+    gap: 50px;
+    text-decoration: none;
+    list-style: none;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+
+}
+.footer ul li img{
+    height: 30px;
+    width: 30px;
+}
 </style>
 
 </head>
@@ -215,24 +253,18 @@ main {
 </div>
 
                 <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="https://www.google.com/">Home</a></li>
                     <li><a href="#">Careers</a></li>
-                    <li><a href="#">About</a></li>
-                    <li class="dropdown">
-                        <span class="dropdown-toggle">Features</span>
-                        <div class="dropdown-content">
-                            <a href="#">Todo List</a>
-                            <a href="#">Calendar</a>
-                            <a href="#">Reminders</a>
-                            <a href="#">Planning</a>
-                        </div>
-                    </li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About Us</a></li>
                     <li class="dropdown">
                         <span class="dropdown-toggle">Company</span>
                         <div class="dropdown-content">
                             <a href="#">History</a>
-                            <a href="#">Our Team</a>
-                            <a href="#">Blog</a>
+                            <a href="#">Donate</a>
+                            <a href="#">Competitors</a>
+                            <a href="#">Partiners</a>
+                            <a href="#">Partiners</a>
                         </div>
                     </li>
                     
@@ -246,14 +278,28 @@ main {
     <main>
         <section class="hero-section">
             <div class="hero-left">
-                <h1>Make <br> remote work</h1>
-                <p>Get your team in sync, no matter your location. <br> Streamline processes, create team rituals, <br> and watch productivity soar.</p>
+                <h1>WELCOME<br> TO LIFE MATTERS WORLD</h1>
+                <p>A place where we learn,collaborate,evaluate and innovate<br>Streamline life process, <br>As well as bringing people from different enthinicity together</p>
                 <button class="learn-more-btn">Learn more</button>
             </div>
             <div class="hero-right">
-                <img src="images/image-hero-mobile.png" alt="Remote Working">
+                <img src="{% static 'images/h.jpg' %}" alt="Logo">
             </div>
         </section>
     </main>
+    <footer class="footer">
+    <ul>
+        <li><a href=""><img src="{% static 'images/facebook.png' %}" alt="Facebook"></a></li>
+        <li><a href=""><img src="{% static 'images/watsup.png' %}" alt="watsup"></a></li>
+        <li><a href=""><img src="{% static 'images/telegram.png' %}" alt="telegram"></a></li>
+        <li><a href=""><img src="{% static 'images/youtube.png' %}" alt="youtube"></a></li>
+        <li><a href=""><img src="{% static 'images/twitter.png' %}" alt="Twitter"></a></li>
+        <li><a href=""><img src="{% static 'images/github.png' %}" alt="github"></a></li>
+        <li><a href=""><img src="{% static 'images/linkedin.png' %}" alt="LinkedIn"></a></li>
+        <li><a href=""><img src="{% static 'images/instagram.png' %}" alt="Instagram"></a></li>
+    
+    </ul>
+    </footer>
+
 </body>
 </html>
